@@ -1,0 +1,18 @@
+
+
+I want to create a ChatGPT that generates a walking path based on RuneScape walking tiles. The output should be in a structured JSON format representing the walking pattern. For example, the JSON should list each relative movement from the previous tile using dx and dy. Each step represents the change in X and Y coordinates: +1,+1 is diagonal up-right, +1,0 is one step right, 0,+1 is one step up, etc. You can optionally include timestamps or step counts for each movement.
+
+Optional additions:
+- Include directional steps (north, south, east, west)
+- Include timestamps or step counts if needed
+
+Example JSON output with timestamps:
+
+{
+  "path": [
+    {"dx": +1, "dy": 0, "step": 1, "timestamp": "00:00:01"},   // step right
+    {"dx": +1, "dy": +1, "step": 2, "timestamp": "00:00:02"},  // step diagonal up-right
+    {"dx": 0, "dy": +1, "step": 3, "timestamp": "00:00:03"},   // step up
+    {"dx": +1, "dy": 0, "step": 4, "timestamp": "00:00:04"}    // step right
+  ]
+}
